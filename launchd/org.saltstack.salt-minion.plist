@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>EnvironmentVariables</key>
+    <dict>
+           <key>PYTHONPATH</key>
+           <string>/usr/local/Cellar/saltstack/2015.8.3/libexec/lib/python2.7/site-packages:/usr/local/Cellar/saltstack/2015.8.3/libexec/vendor/lib/python2.7/site-packages</string>
+    </dict>
+    <key>UserName</key>
+    <string>root</string>
+    <key>Label</key>
+    <string>salt-minion</string>
+    <key>Disabled</key>
+    <false/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProgramArguments</key>
+    <array>
+			<string>/usr/local/bin/python</string>
+			<string>/usr/local/Cellar/saltstack/2015.8.3/libexec/bin/salt-minion</string>
+      <string>-l</string>
+      <string>debug</string>
+    </array>
+    <key>SoftResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>100000</integer>
+    </dict>
+    <key>HardResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>100000</integer>
+    </dict>
+		<!-- Debug the issue
+		<key>StandardErrorPath</key>
+		<string>/tmp/salt-minion.err</string>
+		<key>StandardOutPath</key>
+		<string>/tmp/salt-minion.out</string>
+		-->
+	</dict>
+</plist>
